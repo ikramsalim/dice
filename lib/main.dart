@@ -9,23 +9,25 @@ void main() {
           title: Text('Dice'),
           backgroundColor: Colors.deepPurpleAccent,
         ),
-        body: DicePage(),
+        body: DicePageDynamic(),
       ),
     ),
   );
 }
+
 //create a stateful widget; shortcut is  stful
+//this class will let part of the user interface change dynamically
+class DicePageDynamic extends StatefulWidget {
+  @override
+  _DicePageDynamicState createState() => _DicePageDynamicState();
+}
 
-class DicePage extends StatelessWidget {
-  //make dice image change anytime a user presses
-  //create a var for the left and right
-
+class _DicePageDynamicState extends State<DicePageDynamic> {
+  int leftDiceNumber = 1;
   @override
   Widget build(BuildContext context) {
     //make dice image change anytime a user presses
     //create a var for the left and right
-
-    int leftDiceNumber = 6;
 
     return Center(
       child: Row(
@@ -33,7 +35,9 @@ class DicePage extends StatelessWidget {
           Expanded(
             child: FlatButton(
                 onPressed: () {
-                  print('Left button got pressed');
+                  setState(() {
+                    leftDiceNumber = 5;
+                  });
                 },
                 child: Image.asset('images/dice$leftDiceNumber.png')),
           ),
