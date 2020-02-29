@@ -1,4 +1,4 @@
-#DICE
+## DICE
 
 Creating a native dice mobile app using Dart and Flutter and can be used on both Android and iPhone.  
 
