@@ -25,6 +25,7 @@ class DicePageDynamic extends StatefulWidget {
 
 class _DicePageDynamicState extends State<DicePageDynamic> {
   int leftDiceNumber = 1;
+  int rightDiceNumber = 1;
   @override
   Widget build(BuildContext context) {
     //make dice image change anytime a user presses
@@ -45,9 +46,11 @@ class _DicePageDynamicState extends State<DicePageDynamic> {
           Expanded(
             child: FlatButton(
               onPressed: () {
-                print('Right button got pressed');
+                setState(() {
+                  rightDiceNumber = Random().nextInt(6) + 1;
+                });
               },
-              child: Image.asset('images/dice2.png'),
+              child: Image.asset('images/dice$rightDiceNumber.png'),
             ),
           ),
         ],
