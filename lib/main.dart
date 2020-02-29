@@ -7,7 +7,14 @@ void main() {
       home: Scaffold(
         backgroundColor: Colors.deepPurpleAccent,
         appBar: AppBar(
-          title: Text('Dice'),
+          title: Text(
+            'Dice ',
+            style: TextStyle(
+              fontSize: 50.0,
+              color: Colors.white,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
           backgroundColor: Colors.deepPurpleAccent,
         ),
         body: DicePageDynamic(),
@@ -26,6 +33,14 @@ class DicePageDynamic extends StatefulWidget {
 class _DicePageDynamicState extends State<DicePageDynamic> {
   int leftDiceNumber = 1;
   int rightDiceNumber = 1;
+
+  void changeDiceFace() {
+    setState(() {
+      leftDiceNumber = Random().nextInt(6) + 1;
+      rightDiceNumber = Random().nextInt(6) + 1;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     //make dice image change anytime a user presses
@@ -37,20 +52,14 @@ class _DicePageDynamicState extends State<DicePageDynamic> {
           Expanded(
             child: FlatButton(
                 onPressed: () {
-                  setState(() {
-                    leftDiceNumber = Random().nextInt(6) + 1;
-                    rightDiceNumber = Random().nextInt(6) + 1;
-                  });
+                  changeDiceFace();
                 },
                 child: Image.asset('images/dice$leftDiceNumber.png')),
           ),
           Expanded(
             child: FlatButton(
               onPressed: () {
-                setState(() {
-                  rightDiceNumber = Random().nextInt(6) + 1;
-                  leftDiceNumber = Random().nextInt(6) + 1;
-                });
+                changeDiceFace();
               },
               child: Image.asset('images/dice$rightDiceNumber.png'),
             ),
