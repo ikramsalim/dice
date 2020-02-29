@@ -25,19 +25,16 @@ A dice rolling app which changes randomly when you click on it.
 
 ### X-code
 
-
 ### Android Studio 
-
-
 
 ## UX DIAGRAM
 
 
-![](imagesdice/updateddice.png)
+   ![](imagesdice/updateddice.png)
 
-# A GIF OF THE APP RUNNING
+### A GIF OF THE APP RUNNING
 
-![dice](https://user-images.githubusercontent.com/17056354/75616064-c7a0d780-5b11-11ea-9caf-d81ddd3e8edb.gif)
+   ![dice](https://user-images.githubusercontent.com/17056354/75616064-c7a0d780-5b11-11ea-9caf-d81ddd3e8edb.gif)
 
  
 For help getting started with Flutter, view 
