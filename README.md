@@ -1,6 +1,6 @@
 #DICE
 
-Creating a dice flutter app
+Creating a native dice mobile app using Dart and Flutter and can be used on both Android and iPhone.  
 
 ## Getting Started
 
@@ -23,21 +23,19 @@ A dice rolling app which changes randomly when you click on it.
 
 ## INSTALLATIONS
 
-
 ### X-code
 
 
 ### Android Studio 
 
 
-### Flutter
 
-
-## UML DIAGRAM
+## UX DIAGRAM
 
 
 ![](imagesdice/updateddice.png)
 
+# A GIF OF THE APP RUNNING
 
 ![dice](https://user-images.githubusercontent.com/17056354/75616064-c7a0d780-5b11-11ea-9caf-d81ddd3e8edb.gif)
 
